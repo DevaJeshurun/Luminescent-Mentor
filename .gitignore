@@ -1,0 +1,60 @@
+# ═══════════════════════════════════════════════════════════
+#  CodeMentor AI — .gitignore
+# ═══════════════════════════════════════════════════════════
+
+# ── Java / Maven (backend) ──────────────────────────────────
+backend/target/
+backend/*.jar
+backend/*.war
+backend/*.class
+backend/.mvn/wrapper/maven-wrapper.jar
+!backend/.mvn/wrapper/maven-wrapper.properties
+
+# ── SQLite database ─────────────────────────────────────────
+# The DB is local runtime data — never commit it
+backend/*.db
+backend/*.sqlite
+*.db
+*.sqlite
+
+# ── Node / npm (frontend) ──────────────────────────────────
+frontend/node_modules/
+node_modules/
+
+# ── Vite build output ───────────────────────────────────────
+frontend/dist/
+frontend/.vite/
+
+# ── Environment & secrets ───────────────────────────────────
+.env
+.env.*
+!.env.example
+backend/src/main/resources/application-prod.properties
+backend/src/main/resources/application-local.properties
+
+# ── Logs ────────────────────────────────────────────────────
+*.log
+backend_run.log
+backend_error.log
+backend_errors.txt
+run_out.txt
+run_err.txt
+hs_err_pid*.log
+
+# ── IDE & OS ────────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Test / coverage ─────────────────────────────────────────
+backend/target/surefire-reports/
+
+# ── Misc ────────────────────────────────────────────────────
+*.tmp
+*.bak
+*.swp
