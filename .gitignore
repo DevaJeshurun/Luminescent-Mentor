@@ -29,6 +29,9 @@ frontend/.vite/
 .env
 .env.*
 !.env.example
+# Spring Boot secrets file — NEVER commit this
+backend/src/main/resources/application-secrets.properties
+# Profile-specific overrides that may contain secrets
 backend/src/main/resources/application-prod.properties
 backend/src/main/resources/application-local.properties
 
